@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"background":"#0f1321","surface-container-low":"#171b2a","error":"#ffb4ab","surface-base":"#070b19","status-error":"#ef4444","primary":"#8ed5ff","on-secondary-container":"#c4abff","secondary-fixed":"#e9ddff","secondary":"#d0bcff","surface-dim":"#0f1321","inverse-on-surface":"#2c303f","on-surface-variant":"#bdc8d1","inverse-surface":"#dfe1f6","status-success":"#10b981","surface-tint":"#7bd0ff","primary-container":"#38bdf8","outline-variant":"#3e484f","on-secondary-fixed":"#23005c","surface-container-high":"#252939","surface-bright":"#353948","on-primary-container":"#004965","on-background":"#dfe1f6","surface-container-highest":"#303444","tertiary-fixed":"#ffd6fd","fuchsia-neon":"#d946ef","surface-variant":"#303444","cyan-accent":"#38bdf8","surface":"#0f1321","on-error-container":"#ffdad6","on-tertiary-fixed-variant":"#7c008e","surface-container-lowest":"#090e1c","on-primary-fixed-variant":"#004c69","on-secondary-fixed-variant":"#5516be","on-surface":"#dfe1f6","text-tertiary":"#64748b","inverse-primary":"#00668a","on-primary":"#00354a","tertiary-container":"#f488ff","secondary-container":"#571bc1","text-primary":"#f8fafc","outline":"#87929a","on-error":"#690005","surface-card":"rgba(19, 28, 54, 0.7)","primary-fixed-dim":"#7bd0ff","secondary-fixed-dim":"#d0bcff","surface-container":"#1b1f2e","status-warning":"#f59e0b","surface-terminal":"#030712","on-tertiary-container":"#770089","text-secondary":"#94a3b8","border-glass":"rgba(59, 130, 246, 0.25)","on-tertiary":"#580065","tertiary-fixed-dim":"#fbabff","primary-fixed":"#c4e7ff","surface-elevated":"#0b1220","on-tertiary-fixed":"#36003e","on-secondary":"#3c0091","border-subtle":"#1e293b","electric-blue":"#2563eb","tertiary":"#fcb4ff","error-container":"#93000a","on-primary-fixed":"#001e2c"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-xs":"0.25rem","gutter":"1.5rem","space-xl":"2.5rem","margin":"2rem","space-md":"1rem","margin-mobile":"1rem","space-2xl":"4rem","space-lg":"1.5rem"},"fontFamily":{"code-inline":["JetBrains Mono"],"body-lg":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"display-hero":["Inter"],"code-block":["JetBrains Mono"],"headline-sm":["Inter"],"label-badge":["Inter"],"display-hero-mobile":["Inter"],"body-md":["Inter"],"label-code":["JetBrains Mono"],"headline-lg":["Inter"],"headline-md":["Inter"]},"fontSize":{"code-inline":["13px",{"lineHeight":"18px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"68px","letterSpacing":"-0.02em","fontWeight":"800"}],"code-block":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"800"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"label-code":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg":["36px",{"lineHeight":"46px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface-base font-body-md text-body-md text-on-surface min-h-screen selection:bg-cyan-accent selection:text-surface-terminal"><div class="fixed inset-0 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.04] z-0"></div><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="tutorials" href="#"><img alt="crozz.me Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDXuu-oAj96y68rZhzWN2Lwyvq7QYmh3f9WvcOVAgrac0x1gWnVxUII5wK-_MzJ1yXhU2nEtEAQHqW7dcmsQtcaiTvIQDphGMFidSQy1o8ggqSj0yjQmACy3vLpFSlzcKVfxbOZ71Hb3aXgWiXExbIoIEQlZs3eLw56pRXlHIryVHP_VBl48-rjg_HDuwsM5msBPET1lqVvA1aojIMxgLcVOaIK16p3IY-7Looaftng"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight group-hover:text-primary transition-colors">crozz<span class="text-cyan-accent">.me</span></span><span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider hidden sm:inline-block">Ubuntu Docs</span></div></a><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors text-primary font-bold" data-path="tutorials" href="#">教程大全</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="online-tools" href="#">在线工具 <span class="font-label-badge text-label-badge px-space-xs py-0.5 rounded-full bg-surface-container-high text-cyan-accent ml-0.5">38</span></a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="columns" href="#">15大专栏</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="cheatsheet" href="#">命令速查</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="playground" href="#">运维演练场</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="github" href="#">GitHub</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="about" href="#">关于</a></nav></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg bg-surface-container-low text-text-secondary hover:text-on-surface hover:bg-surface-container transition-all text-body-sm font-body-sm" type="button"><span class="material-symbols-outlined text-cyan-accent text-[18px]">search</span><span class="hidden md:inline-block">快捷搜索</span><kbd class="font-label-code text-label-code px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">⌘K</kbd><kbd class="font-label-code text-label-code px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">/</kbd></button><div class="hidden md:flex items-center gap-space-xs"><button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="切换语言" type="button"><span class="material-symbols-outlined text-[18px]">translate</span></button><button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="主题" type="button"><span class="material-symbols-outlined text-[18px]">dark_mode</span></button></div><a class="relative inline-flex items-center justify-center px-space-md py-1.5 rounded-lg bg-gradient-to-r from-electric-blue via-secondary-container to-fuchsia-neon text-text-primary font-headline-sm text-body-sm shadow-[0_0_20px_rgba(56,189,248,0.35)] hover:shadow-[0_0_25px_rgba(217,70,239,0.5)] transition-all" data-path="tutorials" href="#">开始阅读</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative z-10 w-full pt-16 bg-surface-base"><div class="flex flex-col w-full relative">
+<!-- Ambient Atmospheric Backdrop Glows -->
+<div class="absolute top-12 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-tr from-electric-blue/15 via-secondary-container/20 to-fuchsia-neon/15 blur-[140px] pointer-events-none rounded-full"></div>
+<div class="absolute top-[800px] right-0 w-[550px] h-[550px] bg-cyan-accent/10 blur-[150px] pointer-events-none rounded-full"></div>
+<div class="absolute top-[2200px] left-0 w-[600px] h-[600px] bg-secondary/10 blur-[160px] pointer-events-none rounded-full"></div>
+<!-- SECTION 1: HERO SECTION -->
+<section class="relative z-10 max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-2xl flex flex-col items-center text-center">
+<!-- Floating Tech Pill Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high/70 backdrop-blur-md shadow-[0_0_25px_rgba(56,189,248,0.25)] mb-space-lg group hover:scale-[1.02] transition-transform">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-neon opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-accent"></span>
+</span>
+<span class="font-label-badge text-label-badge text-text-primary tracking-wider uppercase font-semibold">
+        🔥 2025 全新升级 · 覆盖 Ubuntu 24.04 LTS &amp; 22.04 LTS
+      </span>
+<span class="material-symbols-outlined text-[16px] text-cyan-accent group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</div>
+<!-- Giant Dominant Headline -->
+<h1 class="font-display-hero text-display-hero max-w-5xl tracking-tight text-text-primary leading-[1.12] mb-space-md">
+      Ubuntu Server
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-accent to-secondary">终极指南</span>
+      与
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-fuchsia-neon to-tertiary">实战教程</span>
+</h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-text-secondary max-w-3xl mb-space-xl leading-relaxed">
+      从零基础系统入门到高可用集群生产落地，专为系统架构师、DevOps 专家与 Linux 运维工程师打造的深度知识库、配置图谱与交互式实操秘籍。
+    </p>
+<!-- Prominent Interactive Search Bar -->
+<div class="w-full max-w-3xl mb-space-md">
+<div class="relative flex items-center w-full bg-surface-container-low/90 backdrop-blur-2xl rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.6)] p-2 transition-all focus-within:shadow-[0_0_35px_rgba(56,189,248,0.35)] focus-within:bg-surface-container">
+<div class="pl-space-sm pr-space-xs flex items-center text-cyan-accent">
+<span class="font-code-inline text-headline-sm select-none font-bold text-cyan-accent">$</span>
+</div>
+<input class="w-full bg-transparent border-0 text-text-primary placeholder:text-text-tertiary font-body-md text-body-md focus:outline-none focus:ring-0 px-space-xs py-2" id="hero-omni-search" placeholder="搜索 500+ 教程、配置手册、报错解决方案 (例如: Nginx HTTPS, Docker 网络, ZFS 存储池)..." type="text"/>
+<div class="hidden sm:flex items-center gap-1.5 pr-2 select-none">
+<kbd class="font-label-code text-label-code px-2 py-1 rounded-md bg-surface-container-highest text-on-surface-variant shadow-sm">⌘ K</kbd>
+<kbd class="font-label-code text-label-code px-2 py-1 rounded-md bg-surface-container-highest text-on-surface-variant shadow-sm">/</kbd>
+</div>
+<button class="inline-flex items-center gap-1.5 px-space-lg py-3 rounded-xl bg-gradient-to-r from-electric-blue via-secondary-container to-fuchsia-neon text-text-primary font-headline-sm text-body-sm shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_28px_rgba(217,70,239,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">search</span>
+<span>搜索</span>
+</button>
+</div>
+<!-- Quick Search Command Tags -->
+<div class="flex flex-wrap items-center justify-center gap-2 mt-space-sm text-body-sm font-body-sm">
+<span class="text-text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> 高频检索:
+        </span>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface-variant hover:text-cyan-accent transition-colors font-code-inline text-code-inline" onclick="document.getElementById('hero-omni-search').value='Nginx 反向代理'" type="button">
+          Nginx 反向代理
+        </button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface-variant hover:text-cyan-accent transition-colors font-code-inline text-code-inline" onclick="document.getElementById('hero-omni-search').value='Docker Compose 编排'" type="button">
+          Docker Compose
+        </button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface-variant hover:text-cyan-accent transition-colors font-code-inline text-code-inline" onclick="document.getElementById('hero-omni-search').value='UFW 防火墙配置'" type="button">
+          UFW 防火墙
+        </button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface-variant hover:text-cyan-accent transition-colors font-code-inline text-code-inline" onclick="document.getElementById('hero-omni-search').value='ZFS 存储池扩容'" type="button">
+          ZFS 存储池
+        </button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface-variant hover:text-cyan-accent transition-colors font-code-inline text-code-inline" onclick="document.getElementById('hero-omni-search').value='WireGuard 组网'" type="button">
+          WireGuard VPN
+        </button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface-variant hover:text-cyan-accent transition-colors font-code-inline text-code-inline" onclick="document.getElementById('hero-omni-search').value='K8s 生产落地'" type="button">
+          Kubernetes 集群
+        </button>
+</div>
+</div>
+<!-- Primary Call-to-Actions (CTAs) -->
+<div class="flex flex-wrap items-center justify-center gap-space-md mt-space-lg">
+<a class="inline-flex items-center gap-2 px-space-xl py-3.5 rounded-xl bg-gradient-to-r from-electric-blue via-secondary-container to-fuchsia-neon text-text-primary font-headline-sm text-body-md shadow-[0_0_24px_rgba(56,189,248,0.45)] hover:shadow-[0_0_36px_rgba(217,70,239,0.7)] hover:scale-[1.03] transition-all" href="#columns-section">
+<span>开始探索 500+ 实战教程</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-space-lg py-3.5 rounded-xl bg-surface-container-high/70 hover:bg-surface-container-highest/90 text-cyan-accent hover:text-text-primary backdrop-blur-md font-headline-sm text-body-md shadow-md transition-all" href="#tools-section">
+<span class="material-symbols-outlined text-[20px] text-cyan-accent">build</span>
+<span>体验 38 款在线运维工具</span>
+</a>
+<a class="inline-flex items-center gap-2 px-space-lg py-3.5 rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high text-on-surface-variant hover:text-text-primary font-headline-sm text-body-md shadow-sm transition-all" href="#quickref-section">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<span>常用命令速查手册</span>
+</a>
+</div>
+</section>
+<!-- SECTION 2: BOLD METRICS & HIGHLIGHTS BAR -->
+<section class="relative z-10 max-w-7xl mx-auto px-margin-mobile lg:px-margin -mt-space-sm mb-space-2xl w-full">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="relative group p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-[0_12px_32px_rgba(0,0,0,0.5)] transition-all hover:-translate-y-1 hover:bg-surface-container">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-badge text-label-badge text-cyan-accent uppercase tracking-wider font-semibold">TUTORIAL REPO</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+</div>
+</div>
+<div class="flex items-baseline gap-1 my-1">
+<span class="font-display-hero text-headline-lg font-bold font-code-block text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-accent">500+</span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-semibold">篇</span>
+</div>
+<h4 class="font-headline-sm text-body-md text-text-primary font-medium mb-1">权威实战文章</h4>
+<p class="font-body-sm text-body-sm text-text-secondary leading-normal">
+          覆盖 100% 生产环境高频场景，每周持续更新核验。
+        </p>
+<div class="mt-space-md pt-2 flex items-center gap-1.5 text-status-success font-code-inline text-label-code">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success animate-ping"></span>
+<span>已全面适配 Ubuntu 24.04</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="relative group p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-[0_12px_32px_rgba(0,0,0,0.5)] transition-all hover:-translate-y-1 hover:bg-surface-container">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-badge text-label-badge text-fuchsia-neon uppercase tracking-wider font-semibold">ONLINE TOOLS</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-fuchsia-neon group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[20px]">handyman</span>
+</div>
+</div>
+<div class="flex items-baseline gap-1 my-1">
+<span class="font-display-hero text-headline-lg font-bold font-code-block text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-neon to-tertiary">38</span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-semibold">款</span>
+</div>
+<h4 class="font-headline-sm text-body-md text-text-primary font-medium mb-1">交互式在线工具</h4>
+<p class="font-body-sm text-body-sm text-text-secondary leading-normal">
+          Subnet 计算、Crontab 可视化、Nginx/Systemd 快速生成。
+        </p>
+<div class="mt-space-md pt-2 flex items-center gap-1.5 text-cyan-accent font-code-inline text-label-code">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>浏览器端 0 延时实时计算</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="relative group p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-[0_12px_32px_rgba(0,0,0,0.5)] transition-all hover:-translate-y-1 hover:bg-surface-container">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-badge text-label-badge text-secondary uppercase tracking-wider font-semibold">KNOWLEDGE GRAPH</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+</div>
+<div class="flex items-baseline gap-1 my-1">
+<span class="font-display-hero text-headline-lg font-bold font-code-block text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary-container to-primary">15</span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-semibold">大</span>
+</div>
+<h4 class="font-headline-sm text-body-md text-text-primary font-medium mb-1">核心技术专栏</h4>
+<p class="font-body-sm text-body-sm text-text-secondary leading-normal">
+          底层内核驱动、存储网络到 GPU 算力集群端到端体系。
+        </p>
+<div class="mt-space-md pt-2 flex items-center gap-1.5 text-secondary font-code-inline text-label-code">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>全链路工程阶梯模型</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="relative group p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-[0_12px_32px_rgba(0,0,0,0.5)] transition-all hover:-translate-y-1 hover:bg-surface-container">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-badge text-label-badge text-status-success uppercase tracking-wider font-semibold">COMMUNITY IMPACT</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-status-success group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+</div>
+<div class="flex items-baseline gap-1 my-1">
+<span class="font-display-hero text-headline-lg font-bold font-code-block text-transparent bg-clip-text bg-gradient-to-r from-status-success via-primary to-cyan-accent">120k+</span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-semibold">次</span>
+</div>
+<h4 class="font-headline-sm text-body-md text-text-primary font-medium mb-1">开发者月度访问</h4>
+<p class="font-body-sm text-body-sm text-text-secondary leading-normal">
+          全国万名 SRE 与 DevOps 工程师的每日案头排障参考书。
+        </p>
+<div class="mt-space-md pt-2 flex items-center gap-1.5 text-text-secondary font-code-inline text-label-code">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+<span>99.98% 生产高可用验证</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: 15 大核心技术专栏全景矩阵 -->
+<section class="relative z-10 max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl w-full" id="columns-section">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<div class="inline-flex items-center gap-1 px-space-sm py-1 rounded-md bg-secondary-container/40 text-on-secondary-container font-label-badge text-label-badge mb-space-xs">
+<span class="material-symbols-outlined text-[14px]">device_hub</span>
+<span>体系化知识图谱</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-text-primary font-bold tracking-tight">
+          15 大核心技术专栏，构建系统化运维能力体系
+        </h2>
+<p class="font-body-md text-body-md text-text-secondary mt-1">
+          从底层网络驱动到现代化云原生与 AI 算力底座，阶梯式覆盖全部生产技术栈。
+        </p>
+</div>
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-cyan-accent bg-surface-container-low px-space-md py-2 rounded-xl">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>代码经实机压测与生产级审计</span>
+</div>
+</div>
+<!-- 15 Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Card 1: 基础入门 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-electric-blue/30 to-primary/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-cyan-accent font-semibold">36 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 01 · SYSTEM FUNDAMENTALS ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-primary transition-colors mt-1 mb-space-xs">基础入门与管理</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            Ubuntu 24.04 生产初始化安装、APT/Snap 软件源调优、Sudo 细粒度权限管控、Systemd 核心原理及守护进程全流程定制。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">APT 源加速</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Systemd 守护</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">用户组特权</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 2: 安全加固 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-status-error/10 rounded-full blur-2xl group-hover:bg-status-error/20 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-error-container/40 to-status-error/20 flex items-center justify-center text-status-error group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">shield_with_heart</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-status-error font-semibold">42 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 02 · HARDENING &amp; AUDIT ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-status-error transition-colors mt-1 mb-space-xs">安全防护与加固</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            UFW 与 iptables 组合过滤防护、Fail2ban 暴力破解自动封禁、AppArmor 强制访问控制策略与 CIS Benchmarks 合规审计落地。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">UFW 防火墙</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Fail2ban 防爆</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">CIS 合规基线</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 3: 存储管理 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-cyan-accent/10 rounded-full blur-2xl group-hover:bg-cyan-accent/20 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-accent/20 to-electric-blue/30 flex items-center justify-center text-cyan-accent group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">database</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-cyan-accent font-semibold">28 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 03 · STORAGE &amp; FILESYSTEM ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-cyan-accent transition-colors mt-1 mb-space-xs">存储管理与 ZFS</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            LVM 在线逻辑卷无缝扩缩容、ZFS 生产级存储池搭建与快照复制、软件 RAID 阵列灾备、高性能 NFS/Samba 挂载优化。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">ZFS 存储池</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">LVM 动态扩容</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">RAID 容灾</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 4: 网络配置 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary/30 to-secondary-container/40 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">lan</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-semibold">35 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 04 · NETWORK ARCHITECTURE ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-secondary transition-colors mt-1 mb-space-xs">网络协议栈与 Netplan</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            Ubuntu 原生 Netplan YAML 架构全面剖析、双网卡 Bond 聚合负载均衡、802.1Q VLAN 隔离、BGP 动态路由与 CoreDNS 服务实践。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Netplan YAML</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Bonding 聚合</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">BGP 路由</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 5: 容器技术 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-electric-blue/40 to-cyan-accent/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">view_in_ar</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-cyan-accent font-semibold">49 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 05 · CONTAINERS &amp; RUNTIME ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-primary transition-colors mt-1 mb-space-xs">容器化与 Docker 栈</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            Docker Engine 26.x 调优、Compose 多容器编排、轻量级 containerd 运行时与 rootless 模式安全加固、Podman 无守护实践。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Docker 26.x</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Compose 编排</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">containerd</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 6: 监控运维 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-status-warning/10 rounded-full blur-2xl group-hover:bg-status-warning/20 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-status-warning/30 to-fuchsia-neon/20 flex items-center justify-center text-status-warning group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">monitoring</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-status-warning font-semibold">31 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 06 · OBSERVABILITY ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-status-warning transition-colors mt-1 mb-space-xs">监控观测与告警</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            Prometheus 时序监控搭建、Grafana 炫酷监控大屏模板、Node Exporter 主机指标采集、Alertmanager 微信/钉钉自动化告警。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Prometheus</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Grafana 仪表盘</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">实时告警链</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 7: 自动化运维 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-fuchsia-neon/10 rounded-full blur-2xl group-hover:bg-fuchsia-neon/20 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-fuchsia-neon/30 to-secondary/30 flex items-center justify-center text-fuchsia-neon group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">smart_toy</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-fuchsia-neon font-semibold">27 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 07 · AUTOMATION &amp; GITOPS ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-fuchsia-neon transition-colors mt-1 mb-space-xs">自动化运维与 Ansible</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            Ansible 剧本批量部署千台节点、生产级 Shell 脚本异常捕获与工程化规范、Terraform 声明式管理云基础设施与 CI/CD 流水线。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Ansible 剧本</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Shell 工程化</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Terraform</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 8: 故障排查 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-status-error/10 rounded-full blur-2xl group-hover:bg-status-error/20 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-error-container/40 to-status-warning/20 flex items-center justify-center text-error group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">troubleshoot</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-error font-semibold">39 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 08 · TROUBLESHOOTING ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-error transition-colors mt-1 mb-space-xs">性能调优与故障排查</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            Linux 内核参数 sysctl 调优、OOM Killer 触发机制解密、BPF/Perf 高性能分析工具链、生产高并发网络丢包与句柄泄漏定位。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">eBPF 追踪</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">OOM 调优</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">内核调优</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 9: 数据库系统 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-container/30 to-electric-blue/30 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">dns</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-semibold">24 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 09 · DATABASE &amp; CACHE ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-primary transition-colors mt-1 mb-space-xs">数据库高可用架构</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            PostgreSQL 16 高可用流复制与 Patroni 故障自动切换、MySQL 8.0 性能基准测试与大事务调优、Redis 哨兵与 Cluster 集群运维。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">PostgreSQL HA</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">MySQL 调优</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Redis Cluster</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 10: 虚拟化技术 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary-container/40 to-primary/20 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">memory</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-semibold">22 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 10 · VIRTUALIZATION ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-secondary transition-colors mt-1 mb-space-xs">虚拟化与 KVM/LXD</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            Ubuntu 下部署 KVM 硬件辅助虚拟化、Proxmox VE 深度集成、LXD 系统级轻量容器集群管理与物理网卡 PCI-e 直通。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">KVM / QEMU</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">LXD 容器虚机</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">PCIe 直通</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 11: AI 算力运维 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-fuchsia-neon/15 rounded-full blur-2xl group-hover:bg-fuchsia-neon/25 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-fuchsia-neon/30 to-tertiary-container/30 flex items-center justify-center text-fuchsia-neon group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-fuchsia-neon font-semibold">26 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-fuchsia-neon uppercase tracking-wider font-semibold">[ 11 · AI &amp; GPU INFRA ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-fuchsia-neon transition-colors mt-1 mb-space-xs">AI 算力运维与 GPU 驱动</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            Ubuntu 24.04 NVIDIA 驱动无坑安装、CUDA Toolkit 容器化、vLLM 大模型推理高并发压测调优与私有化 Ollama 生产调度。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">NVIDIA 驱动</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">CUDA 容器</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">vLLM 压测</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 12: SSH 远程与密钥 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-accent/20 to-secondary/30 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">vpn_key</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-cyan-accent font-semibold">19 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 12 · SECURE ACCESS ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-primary transition-colors mt-1 mb-space-xs">SSH 远程与堡垒机</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            Ed25519 现代高强度密钥对认证、SSH 零信任双因子验证、生产级轻量堡垒机跳板配置与抗网络抖动 Mosh 协议加速。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Ed25519 秘钥</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">2FA 双因子</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">跳板机审计</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 13: 命令速查手册 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-cyan-accent/10 rounded-full blur-2xl group-hover:bg-cyan-accent/20 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-electric-blue/30 to-secondary/30 flex items-center justify-center text-cyan-accent group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">code</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-cyan-accent font-semibold">180+ 命令</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 13 · CHEATSHEET ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-cyan-accent transition-colors mt-1 mb-space-xs">Linux 核心命令速查</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            管道符精粹、三剑客 awk/sed/grep 实操实例、文件系统查找 find/xargs 妙用、端口与连接排查 ss/lsof 命令行手册。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">awk / sed / grep</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">ss / netstat</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">find 组合技</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 14: Web 架构与高可用 -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/30 to-electric-blue/30 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">public</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-semibold">38 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 14 · WEB &amp; HIGH AVAILABILITY ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-primary transition-colors mt-1 mb-space-xs">Web 架构与负载均衡</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            Nginx 10 万高并发内核与连接池调优、HAProxy 4/7 层代理分流、Keepalived 虚 IP 故障漂移与自动化 Let's Encrypt 证书申请。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Nginx 并发调优</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Keepalived 漂移</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">SSL/TLS 0-RTT</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 15: 云原生 Kubernetes -->
+<a class="group relative p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/15 rounded-full blur-2xl group-hover:bg-secondary/25 transition-all pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary/40 to-primary/30 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">cloud_circle</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-semibold">45 篇实战</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary uppercase tracking-wider">[ 15 · CLOUD NATIVE &amp; K8S ]</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-secondary transition-colors mt-1 mb-space-xs">云原生 Kubernetes</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-space-md">
+            从 K3s 极简单节点到 kubeadm 搭建万核高可用 K8s 集群，深入 Cilium eBPF CNI 网络方案与 Cert-Manager 证书全托管。
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">kubeadm 生产集群</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Cilium eBPF</span>
+<span class="font-code-inline text-label-code px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Ingress 网关</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-cyan-accent group-hover:text-primary transition-colors">
+<span class="font-medium">进入专栏学习</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+</div>
+</section>
+<!-- SECTION 4: 38 款在线交互运维工具精选 -->
+<section class="relative z-10 max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl w-full" id="tools-section">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-md bg-primary-container/20 text-cyan-accent font-label-badge text-label-badge mb-space-xs">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>纯前端零延迟 · 数据不出浏览器</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-text-primary font-bold tracking-tight">
+          38 款在线互动运维工具，提升 10 倍排查效率
+        </h2>
+<p class="font-body-md text-body-md text-text-secondary mt-1">
+          告别翻手册与手工计算，输入参数即时输出生产可用的合规配置与解析结果。
+        </p>
+</div>
+<a class="inline-flex items-center gap-1 text-cyan-accent hover:text-primary font-headline-sm text-body-sm font-semibold transition-colors" href="#">
+<span>探索全部 38 款实用工具</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Featured Tools Grid (6 interactive tool cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md mb-space-xl">
+<!-- Tool 1: Crontab -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-md transition-all hover:bg-surface-container hover:shadow-[0_0_24px_rgba(56,189,248,0.2)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-cyan-accent font-label-badge text-label-badge font-bold">
+              🔥 热门排行 #1
+            </span>
+<span class="font-label-code text-label-code text-text-tertiary">CRON-GENERATOR</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">Crontab 表达式可视化生成器</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+            分钟、小时、日期、月份周期可视化配置，支持实时中文含义解析与未来 5 次执行时间预演。
+          </p>
+<div class="bg-surface-terminal p-space-sm rounded-xl font-code-block text-code-block text-cyan-accent mb-space-md">
+<code>0 3 * * 1 /usr/local/bin/backup.sh</code>
+<div class="text-text-tertiary text-label-code mt-1">» 每周一凌晨 03:00 执行备份</div>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-cyan-accent hover:text-text-primary font-headline-sm text-body-sm transition-colors flex items-center justify-center gap-2" type="button">
+<span>打开可视化生成器</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<!-- Tool 2: Subnet & CIDR -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-md transition-all hover:bg-surface-container hover:shadow-[0_0_24px_rgba(56,189,248,0.2)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-status-success font-label-badge text-label-badge font-bold">
+              ⚡ 毫秒运算
+            </span>
+<span class="font-label-code text-label-code text-text-tertiary">CIDR-CALC</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">IP 子网掩码与 CIDR 计算器</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+            快速换算网络地址、广播地址、首末可用主机 IP、子网反掩码与容纳主机规模。
+          </p>
+<div class="bg-surface-terminal p-space-sm rounded-xl font-code-block text-code-block text-primary mb-space-md">
+<code>192.168.10.0/24 » 254 可用主机</code>
+<div class="text-text-tertiary text-label-code mt-1">» 掩码: 255.255.255.0 / 广播: .255</div>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-cyan-accent hover:text-text-primary font-headline-sm text-body-sm transition-colors flex items-center justify-center gap-2" type="button">
+<span>打开子网计算工具</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<!-- Tool 3: Nginx SSL Config -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-md transition-all hover:bg-surface-container hover:shadow-[0_0_24px_rgba(56,189,248,0.2)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-fuchsia-neon font-label-badge text-label-badge font-bold">
+              🔒 Mozilla SSL A+
+            </span>
+<span class="font-label-code text-label-code text-text-tertiary">NGINX-BUILDER</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">Nginx 反代与 SSL 配置生成</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+            勾选反向代理、HSTS、TLS 1.3、Gzip 压缩与 HTTP/2 支持，一键导出完整 nginx.conf。
+          </p>
+<div class="bg-surface-terminal p-space-sm rounded-xl font-code-block text-code-block text-fuchsia-neon mb-space-md">
+<code>proxy_pass http://127.0.0.1:8080;</code>
+<div class="text-text-tertiary text-label-code mt-1">» 包含 TLS 1.3 密码套件与安全请求头</div>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-cyan-accent hover:text-text-primary font-headline-sm text-body-sm transition-colors flex items-center justify-center gap-2" type="button">
+<span>在线生成 Nginx 配置</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<!-- Tool 4: UFW Rules Builder -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-md transition-all hover:bg-surface-container hover:shadow-[0_0_24px_rgba(56,189,248,0.2)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-badge text-label-badge font-bold">
+              🛡️ 安全防线
+            </span>
+<span class="font-label-code text-label-code text-text-tertiary">FIREWALL-GEN</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">UFW / Iptables 规则生成器</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+            按源 IP、端口段、协议自动生成无冲突防火墙命令，杜绝误配导致 SSH 失联灾难。
+          </p>
+<div class="bg-surface-terminal p-space-sm rounded-xl font-code-block text-code-block text-primary mb-space-md">
+<code>sudo ufw allow proto tcp from 10.0.0.0/8 to any port 22</code>
+<div class="text-text-tertiary text-label-code mt-1">» 自动规避默认断连危险</div>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-cyan-accent hover:text-text-primary font-headline-sm text-body-sm transition-colors flex items-center justify-center gap-2" type="button">
+<span>构建防火墙规则</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<!-- Tool 5: Systemd Unit Generator -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-md transition-all hover:bg-surface-container hover:shadow-[0_0_24px_rgba(56,189,248,0.2)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-secondary font-label-badge text-label-badge font-bold">
+              ⚙️ 服务守护
+            </span>
+<span class="font-label-code text-label-code text-text-tertiary">SYSTEMD-UNIT</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">Systemd Service 单元生成器</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+            定义 Restart=always 策略、LimitNOFILE 句柄限制、环境变量与非 root 专属运行账号。
+          </p>
+<div class="bg-surface-terminal p-space-sm rounded-xl font-code-block text-code-block text-secondary mb-space-md">
+<code>[Unit] Description=MyApp Daemon</code>
+<div class="text-text-tertiary text-label-code mt-1">» 包含 MemoryMax 与 CPUQuota 限制</div>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-cyan-accent hover:text-text-primary font-headline-sm text-body-sm transition-colors flex items-center justify-center gap-2" type="button">
+<span>配置 Systemd 单元</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<!-- Tool 6: Chmod Calculator -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-md transition-all hover:bg-surface-container hover:shadow-[0_0_24px_rgba(56,189,248,0.2)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-cyan-accent font-label-badge text-label-badge font-bold">
+              🎯 快速换算
+            </span>
+<span class="font-label-code text-label-code text-text-tertiary">PERM-CHMOD</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">Chmod 权限与八进制对照</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+            勾选 Owner/Group/Public 的 r/w/x 权限，实时双向换算 755/644/600 与 SUID/SGID 特殊标志。
+          </p>
+<div class="bg-surface-terminal p-space-sm rounded-xl font-code-block text-code-block text-cyan-accent mb-space-md">
+<code>chmod 755 » rwxr-xr-x (目录标准权限)</code>
+<div class="text-text-tertiary text-label-code mt-1">» 对应 umask 0022 生成逻辑</div>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-cyan-accent hover:text-text-primary font-headline-sm text-body-sm transition-colors flex items-center justify-center gap-2" type="button">
+<span>体验权限对照器</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Centered Call to Action for Tools -->
+<div class="text-center">
+<a class="inline-flex items-center gap-2 px-space-xl py-3 rounded-full bg-surface-container hover:bg-surface-container-high text-cyan-accent hover:text-text-primary transition-all font-headline-sm text-body-md shadow-md" href="#">
+<span>查看完整 38 款在线工具库（含 Docker Compose 转 K8s、Crontab 对照等）</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</section>
+<!-- SECTION 5: 最新教程更新动态 -->
+<section class="relative z-10 max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl w-full">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-md bg-status-success/20 text-status-success font-label-badge text-label-badge mb-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+<span>高频持续同步更新</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-text-primary font-bold tracking-tight">
+          最新技术文章与实操案例
+        </h2>
+<p class="font-body-md text-body-md text-text-secondary mt-1">
+          紧跟 Ubuntu 最新安全补丁、内核重大版本与生产架构变更，所有步骤均已跑通实机验证。
+        </p>
+</div>
+<a class="inline-flex items-center gap-1 text-cyan-accent hover:text-primary font-headline-sm text-body-sm font-semibold transition-colors" href="#">
+<span>浏览全部 500+ 篇归档文章</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Timeline / Feed Cards -->
+<div class="space-y-space-md">
+<!-- Article 1 -->
+<article class="p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:translate-x-1 group flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="space-y-2 max-w-4xl">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-md bg-fuchsia-neon/20 text-fuchsia-neon font-semibold">AI 算力运维</span>
+<span class="font-label-code text-label-code text-text-tertiary">2025-02-28</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-text-tertiary">18 分钟精读</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-cyan-accent">9.8k 阅读</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-fuchsia-neon transition-colors font-semibold">
+<a href="#">Ubuntu 24.04 部署 DeepSeek-R1 满血版与 vLLM 生产级推理加速优化指南</a>
+</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            深入解析量化选择（AWQ vs FP8）、多卡张量并行（TP）显存配置、PagedAttention 内存管理调优，以及通过 Systemd 托管稳定提供 OpenAI 兼容 API 接口。
+          </p>
+</div>
+<div class="shrink-0 flex items-center gap-2 text-fuchsia-neon font-headline-sm text-body-sm font-semibold">
+<span class="hidden md:inline">阅读全文</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:translate-x-1 group flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="space-y-2 max-w-4xl">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-md bg-status-error/20 text-status-error font-semibold">安全加固</span>
+<span class="font-label-code text-label-code text-text-tertiary">2025-02-25</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-text-tertiary">12 分钟精读</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-cyan-accent">7.4k 阅读</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-status-error transition-colors font-semibold">
+<a href="#">生产级 SSH 零信任防护方案：结合 FIDO2 硬件密钥与 Google Authenticator 双因子认证</a>
+</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            告别传统账号密码被撞库隐患，实操配置 PAM 鉴权模块，强制落地物理 USB 硬件安全密钥与手机动态验证码双重鉴权，兼顾紧急应急通道备份。
+          </p>
+</div>
+<div class="shrink-0 flex items-center gap-2 text-status-error font-headline-sm text-body-sm font-semibold">
+<span class="hidden md:inline">阅读全文</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</article>
+<!-- Article 3 -->
+<article class="p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:translate-x-1 group flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="space-y-2 max-w-4xl">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-md bg-cyan-accent/20 text-cyan-accent font-semibold">存储管理</span>
+<span class="font-label-code text-label-code text-text-tertiary">2025-02-21</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-text-tertiary">15 分钟精读</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-cyan-accent">6.1k 阅读</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-cyan-accent transition-colors font-semibold">
+<a href="#">ZFS on Linux 进阶：配置 ARC 缓存压缩比、快照自动同步与坏盘无缝热替换</a>
+</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            深入剖析 LZ4 与 ZSTD 压缩算法对 CPU 开销与 IOPS 的平衡策略，配置 Sanoid/Syncoid 定时快照流式传输灾备，及磁盘告警下的非停机热插拔操作流。
+          </p>
+</div>
+<div class="shrink-0 flex items-center gap-2 text-cyan-accent font-headline-sm text-body-sm font-semibold">
+<span class="hidden md:inline">阅读全文</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</article>
+<!-- Article 4 -->
+<article class="p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:translate-x-1 group flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="space-y-2 max-w-4xl">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-md bg-secondary/20 text-secondary font-semibold">网络配置</span>
+<span class="font-label-code text-label-code text-text-tertiary">2025-02-18</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-text-tertiary">10 分钟精读</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-cyan-accent">8.2k 阅读</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-secondary transition-colors font-semibold">
+<a href="#">Netplan 深度剖析：多网卡 Bond 链路聚合、VLAN 标签与策略路由实战</a>
+</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            解决复杂企业拓扑中的双线 BGP 分流与多内网隔离场景，详解 Netplan 渲染为 systemd-networkd 时的语法陷阱与热重载调试手段。
+          </p>
+</div>
+<div class="shrink-0 flex items-center gap-2 text-secondary font-headline-sm text-body-sm font-semibold">
+<span class="hidden md:inline">阅读全文</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</article>
+<!-- Article 5 -->
+<article class="p-space-lg rounded-2xl bg-surface-container-low/70 hover:bg-surface-container backdrop-blur-md shadow-md transition-all hover:translate-x-1 group flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="space-y-2 max-w-4xl">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-md bg-primary/20 text-primary font-semibold">容器技术</span>
+<span class="font-label-code text-label-code text-text-tertiary">2025-02-14</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-text-tertiary">14 分钟精读</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-cyan-accent">11.5k 阅读</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-primary transition-colors font-semibold">
+<a href="#">Docker 26.x + Containerd 生产环境最佳实践与 Logrotate 日志暴增自动轮转配置</a>
+</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            根治容器打爆根目录磁盘的顽疾：配置 daemon.json 全局日志上限、优化 overlay2 存储驱动性能参数与健康检查自动拉起机制。
+          </p>
+</div>
+<div class="shrink-0 flex items-center gap-2 text-primary font-headline-sm text-body-sm font-semibold">
+<span class="hidden md:inline">阅读全文</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION 6: 终端极客互动引导卡片 -->
+<section class="relative z-10 max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl mb-space-xl w-full" id="quickref-section">
+<div class="relative overflow-hidden rounded-3xl bg-surface-container-lowest shadow-[0_20px_50px_rgba(0,0,0,0.8)] p-space-lg lg:p-space-xl">
+<!-- Ambient corner glow -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-gradient-to-br from-cyan-accent/20 to-fuchsia-neon/20 blur-3xl pointer-events-none rounded-full"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<!-- Left Content -->
+<div class="lg:col-span-6 space-y-space-md">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container text-cyan-accent font-label-badge text-label-badge font-semibold">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>极客命令行专属一键工具</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-text-primary font-bold tracking-tight">
+            获取一键式 Ubuntu 生产环境基线加固调优脚本
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+            内置 APT 换源、BBR 拥塞控制开启、ulimit 调优、Swap 优化、时区 NTP 校准与基础 UFW 规则装配，完全开源、透明可审查。
+          </p>
+<!-- Interactive Newsletter / RSS Signup -->
+<div class="pt-space-xs flex flex-col sm:flex-row items-center gap-space-xs">
+<input class="w-full sm:w-80 px-space-md py-3 rounded-xl bg-surface-container-high border-0 text-text-primary placeholder:text-text-tertiary font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-cyan-accent" placeholder="输入工作邮箱，接收严重漏洞预警与新实战..." type="email"/>
+<button class="w-full sm:w-auto px-space-lg py-3 rounded-xl bg-gradient-to-r from-electric-blue to-cyan-accent text-surface-terminal font-headline-sm text-body-sm font-bold shadow-md hover:scale-[1.02] transition-transform" type="button">
+              订阅推送
+            </button>
+</div>
+<span class="font-label-badge text-label-badge text-text-tertiary block">
+            🔒 承诺不发送垃圾邮件，支持随时一键退订。
+          </span>
+</div>
+<!-- Right Terminal Window Preview -->
+<div class="lg:col-span-6">
+<div class="rounded-2xl bg-surface-terminal shadow-2xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.9)]">
+<!-- Terminal Header -->
+<div class="flex items-center justify-between px-space-md py-2.5 bg-surface-container-lowest/90">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-status-error inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-status-warning inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-status-success inline-block"></span>
+</div>
+<span class="font-label-code text-label-code text-text-tertiary select-none">root@crozz-server:~# bash</span>
+<button class="inline-flex items-center gap-1 font-label-code text-label-code text-cyan-accent hover:text-text-primary px-2 py-1 rounded bg-surface-container-high transition-colors" id="copy-script-btn" onclick="navigator.clipboard.writeText('curl -sSL https://crozz.me/setup.sh | bash'); this.innerText='已复制!';" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>复制命令</span>
+</button>
+</div>
+<!-- Terminal Code Body -->
+<div class="p-space-lg font-code-block text-code-block text-on-surface leading-loose overflow-x-auto space-y-1">
+<div class="text-text-tertiary"># 检查当前 Ubuntu 发行版本与内核</div>
+<div><span class="text-cyan-accent">$</span> lsb_release -a &amp;&amp; uname -r</div>
+<div class="text-text-secondary">No LSB modules are available. Description: Ubuntu 24.04 LTS</div>
+<div class="text-text-tertiary pt-2"># 获取并运行经过数字签名的初始化加固脚本</div>
+<div class="text-fuchsia-neon font-bold">
+<span class="text-cyan-accent">$</span> curl -sSL https://crozz.me/setup.sh | bash
+              </div>
+<div class="text-status-success flex items-center gap-1 pt-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>[OK] 内核 BBR 拥塞控制已激活</span>
+</div>
+<div class="text-status-success flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>[OK] 文件句柄 ulimit 已提升至 1048576</span>
+</div>
+<div class="text-status-success flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>[OK] SSH 端口与密钥鉴权策略已锁定</span>
+</div>
+<div class="text-cyan-accent animate-pulse font-bold pt-1">_</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Quick Search Shortcut Handling
+  window.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      const input = document.getElementById('hero-omni-search');
+      if (input) {
+        input.focus();
+        input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    } else if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      const input = document.getElementById('hero-omni-search');
+      if (input) {
+        input.focus();
+        input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
+</script></main><footer class="relative z-10 w-full bg-surface-container-lowest mt-space-2xl shadow-[0_-1px_12px_rgba(0,0,0,0.5)]"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-lg mb-space-xl"><div class="lg:col-span-2 space-y-space-md"><div class="flex items-center gap-space-sm group"><img alt="crozz.me Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDXuu-oAj96y68rZhzWN2Lwyvq7QYmh3f9WvcOVAgrac0x1gWnVxUII5wK-_MzJ1yXhU2nEtEAQHqW7dcmsQtcaiTvIQDphGMFidSQy1o8ggqSj0yjQmACy3vLpFSlzcKVfxbOZ71Hb3aXgWiXExbIoIEQlZs3eLw56pRXlHIryVHP_VBl48-rjg_HDuwsM5msBPET1lqVvA1aojIMxgLcVOaIK16p3IY-7Looaftng"/><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight">crozz<span class="text-cyan-accent">.me</span></span></div><p class="font-body-sm text-body-sm text-text-secondary leading-relaxed max-w-sm">专业的 Ubuntu Server 终极指南与实战教程，服务全球数十万 Linux 工程师与架构师。</p><div class="flex items-center gap-space-sm pt-space-xs"><span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container text-status-success font-label-badge text-label-badge"><span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span>系统核心运行正常</span><span class="font-label-code text-label-code text-text-tertiary">v24.04 LTS</span></div></div><div><h4 class="font-headline-sm text-body-md text-text-primary mb-space-sm">基础与云原生</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-cyan-accent transition-colors" data-path="tutorials" href="#">基础运维架构</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-cyan-accent transition-colors" data-path="tutorials" href="#">容器化与 Docker</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-cyan-accent transition-colors" data-path="tutorials" href="#">K8s 集群实战</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-cyan-accent transition-colors" data-path="tutorials" href="#">CI/CD 流水线</a></li></ul></div><div><h4 class="font-headline-sm text-body-md text-text-primary mb-space-sm">网络与安全</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-cyan-accent transition-colors" data-path="tutorials" href="#">安全防护与加固</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-cyan-accent transition-colors" data-path="tutorials" href="#">网络栈调优</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-cyan-accent transition-colors" data-path="tutorials" href="#">防火墙与 UFW</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-cyan-accent transition-colors" data-path="tutorials" href="#">WireGuard &amp; VPN</a></li></ul></div><div><h4 class="font-headline-sm text-body-md text-text-primary mb-space-sm">存储与数据库</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-cyan-accent transition-colors" data-path="tutorials" href="#">存储与 ZFS/Btrfs</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-cyan-accent transition-colors" data-path="tutorials" href="#">PostgreSQL 深度</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-cyan-accent transition-colors" data-path="tutorials" href="#">Redis 集群实践</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-cyan-accent transition-colors" data-path="tutorials" href="#">备份与容灾方案</a></li></ul></div><div><h4 class="font-headline-sm text-body-md text-text-primary mb-space-sm">订阅与开源</h4><p class="font-body-sm text-body-sm text-text-secondary mb-space-sm">接收 Ubuntu Server 漏洞预警与最新架构教程推送。</p><div class="flex items-center gap-space-xs mb-space-sm"><a class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container text-cyan-accent hover:bg-surface-container-high transition-colors font-label-code text-label-code" data-path="rss" href="#"><span class="material-symbols-outlined text-[16px]">rss_feed</span> RSS 订阅</a><a class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-code text-label-code" data-path="github" href="#"><span class="material-symbols-outlined text-[16px]">code</span> Star</a></div><p class="font-label-badge text-label-badge text-text-tertiary">遵循 CC BY-NC-SA 4.0 知识共享协议许可</p></div></div><div class="pt-space-md border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-text-tertiary"><div>© 2025 crozz.me. 保留所有权利。</div><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" data-path="privacy" href="#">隐私政策</a><a class="hover:text-on-surface transition-colors" data-path="terms" href="#">使用条款</a><a class="hover:text-on-surface transition-colors" data-path="sitemap" href="#">站点地图</a><a class="hover:text-on-surface transition-colors" data-path="about" href="#">架构说明</a></div></div></div></footer></body></html>
