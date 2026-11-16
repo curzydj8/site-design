@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>crozz.me 网站设计方案对比</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f4f5f7; color: #1a1a1a; line-height: 1.6; padding: 40px 20px; }
+  .wrap { max-width: 960px; margin: 0 auto; }
+  h1 { font-size: 28px; margin-bottom: 8px; }
+  .sub { color: #666; margin-bottom: 32px; }
+  .sub a { color: #2563eb; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; }
+  .card h2 { font-size: 19px; margin-bottom: 4px; }
+  .tag { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; margin-bottom: 12px; }
+  .t1 { background: #0d1117; color: #00ff88; }
+  .t2 { background: #eff6ff; color: #2563eb; }
+  .t3 { background: #ede9fe; color: #7c3aed; }
+  .t4 { background: #070b19; color: #38bdf8; }
+  .card p { color: #555; font-size: 14px; margin-bottom: 16px; }
+  .swatches { display: flex; gap: 6px; margin-bottom: 16px; }
+  .sw { width: 22px; height: 22px; border-radius: 6px; border: 1px solid rgba(0,0,0,.1); }
+  .btn { display: inline-block; background: #111; color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 8px; font-size: 14px; margin-right: 8px; }
+  .btn.ghost { background: #fff; color: #111; border: 1px solid #d1d5db; }
+  .note { margin-top: 32px; color: #888; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>crozz.me 网站设计方案对比</h1>
+  <p class="sub">4 套设计由 Google Stitch 生成（2026-11-16），均为 crozz.me 首页概念稿。点开预览对比，选一套告诉我，我再往下做。原站：<a href="https://crozz.me">crozz.me</a></p>
+  <div class="grid">
+    <div class="card">
+      <span class="tag t1">设计 1 · 深色终端</span>
+      <h2>Dark Terminal</h2>
+      <div class="swatches"><span class="sw" style="background:#0d1117"></span><span class="sw" style="background:#00ff88"></span><span class="sw" style="background:#38bdf8"></span><span class="sw" style="background:#ffb454"></span></div>
+      <p>终端绿主色，等宽字体，顶栏是终端提示符，Hero 右侧是交互感终端窗口，15 大专栏以 01–15 编号卡片呈现。最贴合“服务器运维”气质。</p>
+      <a class="btn" href="design-1-terminal.html">打开预览</a>
+      <a class="btn ghost" href="https://stitch.google.com/projects/7099771478058422589">Stitch 项目</a>
+    </div>
+    <div class="card">
+      <span class="tag t2">设计 2 · 清爽浅色文档</span>
+      <h2>Clean Light Docs</h2>
+      <div class="swatches"><span class="sw" style="background:#ffffff"></span><span class="sw" style="background:#f8fafc"></span><span class="sw" style="background:#2563eb"></span><span class="sw" style="background:#0f172a"></span></div>
+      <p>Stripe Docs / VitePress 式极简白底，大留白、细边框，居中 Hero + 大搜索框，工具区 6 张白色卡片。最干净、最像专业文档站。</p>
+      <a class="btn" href="design-2-light-docs.html">打开预览</a>
+      <a class="btn ghost" href="https://stitch.google.com/projects/17431082805149103392">Stitch 项目</a>
+    </div>
+    <div class="card">
+      <span class="tag t3">设计 3 · 深色仪表盘</span>
+      <h2>Dark Dashboard</h2>
+      <div class="swatches"><span class="sw" style="background:#0f172a"></span><span class="sw" style="background:#8b5cf6"></span><span class="sw" style="background:#06b6d4"></span><span class="sw" style="background:#10b981"></span></div>
+      <p>左侧固定边栏列出 15 大专栏，主内容区卡片式仪表盘，指标卡带迷你折线图，底部是最新教程时间线与排障速查表。信息密度最高。</p>
+      <a class="btn" href="design-3-dashboard.html">打开预览</a>
+      <a class="btn ghost" href="https://stitch.google.com/projects/7104702862172708050">Stitch 项目</a>
+    </div>
+    <div class="card">
+      <span class="tag t4">设计 4 · 大胆科技</span>
+      <h2>Bold Tech</h2>
+      <div class="swatches"><span class="sw" style="background:#070b19"></span><span class="sw" style="background:#38bdf8"></span><span class="sw" style="background:#8b5cf6"></span><span class="sw" style="background:#d946ef"></span></div>
+      <p>深海军蓝底 + 蓝紫渐变、赛博网格背景，超大标题 Hero 主导，渐变 CTA 按钮，视觉冲击最强。最抓眼球，但也最张扬。</p>
+      <a class="btn" href="design-4-bold-tech.html">打开预览</a>
+      <a class="btn ghost" href="https://stitch.google.com/projects/6890244071542503379">Stitch 项目</a>
+    </div>
+  </div>
+  <p class="note">说明：4 套均为首页静态概念稿，站内链接多为占位，点击不会跳转到真实章节；部分图片走 Google CDN。选定后按选中的风格做成整站模板再上 crozz.me。</p>
+</div>
+</body>
+</html>
